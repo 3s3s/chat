@@ -72,7 +72,8 @@
 	if (username === "admin" && message.indexOf('>'+name) != 0)
 		return;
 	
-	message = message.substr(('>'+name).length);
+	if (username === "admin")
+	  message = message.substr(('>'+name).length);
 
     //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
     var messageElement = $("<li>");
